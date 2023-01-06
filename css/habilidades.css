@@ -1,0 +1,117 @@
+.habilidades{
+    text-align: center;
+    display: grid;
+}
+
+.habilidades h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 3rem;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.habilidades img{
+    margin: 15px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.imagen:hover{
+
+    background: #f48cfc;
+    cursor:pointer;
+}
+
+.progress{
+    background-color: #c0c0c0;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-bottom: 10PX;
+}
+.progress-bar{
+    background-color: #278bfd;
+    border-radius: 20px;
+}
+
+#titulo{
+    padding-bottom: 10px;
+}
+
+.BarraProgesso{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media(max-width: 700px){
+
+    .progress
+    {
+    width: 500px;
+    }
+
+    #titulo{
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 600px){
+
+    .progress
+    {
+       width: 400px;
+    }
+
+    #titulo{
+        font-size: 0.7rem;
+    }
+
+    .habilidades h1{
+        font-size: 2rem;
+    }
+
+    .imagen{
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media(max-width: 500px){
+    .progress{
+        width: 250px;
+    }
+
+    #titulo{
+        font-size: 0.5rem;
+    }
+}
+
+@media(max-width: 300px){
+    .habilidades h1{
+        font-size: 1.3rem;
+    }
+
+    .imagen{
+        width: 55px;
+        height: 55px;
+    }
+
+    .habilidades img{
+        margin: 5px;
+        padding: 8px;
+    }
+    
+    .progress{
+        width: 180px;
+    }
+    
+    #titulo{
+        display: none;
+    }
+}
+
+
+  

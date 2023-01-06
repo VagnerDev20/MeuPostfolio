@@ -1,0 +1,78 @@
+.introducao
+{
+    height: 100vh;
+    place-content: center;
+    display: grid;
+    text-align: center;
+}
+
+.introducao h1
+{
+  font-size: 4.5rem;
+  color: #ffffff;
+
+  padding-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+main{
+    
+    background-image:url("../img/fundo.jpg");
+    background-repeat: no-repeat center;
+    background-attachment:fixed;
+    background-size: cover;
+
+}
+
+.introducao p 
+{
+    font-size: 1.8rem;
+    color: #ffffff;
+    
+}
+
+@media(max-width: 850px){
+
+  .introducao h1
+  {
+    font-size: 3.5rem;
+  }
+
+}
+
+@media(max-width: 650px){
+
+  .introducao h1
+  {
+    font-size: 2.5rem;
+    
+  }
+
+  .introducao p 
+  {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media(max-width: 340px){
+  
+  .introducao h1
+  {
+    font-size: 2rem;
+  }
+
+}
+
+@media(max-width: 250px){
+  
+  .introducao p
+  {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+

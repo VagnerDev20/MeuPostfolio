@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SITE PORTIFOLIO DESENVOLVIDO EM HTML CSS E JAVASCRIPT">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>PORTIFOLIO</title>
+</head>
+<body>
+
+    <!--cabeçalho-->
+    <header>
+        
+        <div class="container">
+
+            <div class="logo">
+                <a href="#introducao"><h1>Home</h1></a>
+               
+            </div>
+
+            <div class="menu-section">
+
+                <!--botao menu burguer-->
+                <div class="menu-burguer">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                        <li><a href="#formacao">Formação</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+        
+        <script src="/js/script.js"></script>
+
+    </header>
+
+
+    <!--conteudo principal-->
+    <main>
+
+        <div class="introducao" id="introducao">
+            <h1 id="animacao">Vagner da Silva Vieira</h1>
+            <script src="js/introducao.js"></script>
+            <p>Desenvolvedor Web</p>
+        </div>
+
+    </main>
+
+    <!--sobre-->
+    <section class="sobre" id="sobre" aria-label="Sobre">
+        
+        <div class="FotoPerfil"><img src="img/perfil.jpeg" alt="FotoPerfil" width="400px" height="450px" title="FotoPerfil"></div>
+          
+        <div class="CXSobre">
+
+            <h1 class="TituloSobre">Sobre Mim</h1>
+            <p class="TextoSobre">Olá, sou formado em Análise e Desenvolvimento de Sistemas e possuo experiência em TI. Atualmente estou interessado em desenvolvimento Web, com muita dedicação e aprofundamento nos estudos relacionados a esta grande área pretendo seguir esta carreira. Sou um grande entusiasta de Tecnologia da Informação em geral, estou sempre buscando novos aprendizados e conhecimento sobre desenvolvimento Web.</p>
+
+        </div>
+        
+    </section>
+
+    <!--habilidades-->
+    <section class="habilidades" id="habilidades" aria-label="habilidades">
+
+        <h1>HABILIDADES</h1>
+        
+        <div>
+            <img class="imagen" src="img/HTML.svg" alt="HTML" width="100px" height="100px" title="HTML" id="html" onclick="mudarHabilidade('html')">
+            <img class="imagen" src="img/CSS.svg" alt="CSS" width="100px" height="100px" title="CSS" id="css" onclick="mudarHabilidade('css')">
+            <img class="imagen" src="img/JS.svg" alt="JAVASCRIPT" width="100px" height="100px" title="JAVASCRIPT" id="js" onclick="mudarHabilidade('js')">
+        </div>
+        
+        <div>
+            <img class="imagen" src="img/SQL.svg" alt="SQL" width="100px" height="100px" title="SQL" id="sql" onclick="mudarHabilidade('sql')">
+            <img class="imagen" src="img/GITHUB.svg" alt="GITHUB" width="100px" height="100px" title="GITHUB" id="git" onclick="mudarHabilidade('git')">
+            <img class="imagen" src="img/VISUAL CODE.svg" alt="VISUAL STUDIO CODE" width="100px" height="100px" title="VISUAL STUDIO CODE" id="code" onclick="mudarHabilidade('code')">
+        </div>
+
+
+        <div class="BarraProgesso">
+
+            <p id="titulo">HTML (Linguagem de Marcação de HiperTexto)</p>
+
+            <div class="progress">
+                <div id="barra" class="progress-bar" role="progressbar" style="width: 80%;">80%</div>
+            </div>
+
+        </div>
+
+        <script src="js/interacao.js"></script>
+
+    </section>
+    
+
+    <!--Experiencia-->
+    <section class="experiencia" id="experiencia" aria-label="Experiência">
+
+        <div>
+            <h2 class="subtitulo">Experiência</h2>
+        </div>
+        
+        <div class="divPai">
+
+            <p class="experiencia-texto"> Desenvolvimento de Pequenos projetos. Utilizando Apenas <strong>Html Css e JavaScript</strong>. <br>Tenho experiência com Banco de dados SQL, é Sistema gerenciador de banco de dados Firebird e Mysql.</p>  
+            <h3 class="empresa-titulo">Inforsys Informática e Sistemas LTDA</h3>
+            <span class="empresa-titulo"><strong>Tecnico de Informática</strong></span>
+            <p class="empresa-texto">Implantação, Treinamento e Suporte Técnico em Sistemas Empresariais e Banco de Dados SQL Utilizando SGBD Firebird. Configuração e Otimização de Computadores e Servidores.</p>
+            <p class="empresa-ano"><strong>2022</strong></p>
+
+        </div>
+
+    </section>
+
+
+    <section class="formacao" id="formacao" aria-label="formação">
+        <div class="formacao-container">
+            <h2 class="subtitulo">Formação</h2>
+
+            <div>
+                
+                <ul class="faculdade-lista">
+                    <li class="faculdade">
+                        <span class="faculdade-tipo">FORMADO TECNÓLOGO</span>
+                        <h3 class="faculdade-curso">Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+                        <span class="faculdade-instituicao">Uninter</span>
+                    </li>
+
+                    <li class="faculdade">
+                        <span class="faculdade-tipo">CURSANDO PÓS-GRADUAÇÃO</span>
+                        <h3 class="faculdade-curso">Estrutura e Gestão de Redes de Computadores</h3>
+                        <span class="faculdade-instituicao">Uninter</span>
+                    </li>
+
+                    <li class="faculdade">
+                        <span class="faculdade-tipo">CURSANDO PÓS-GRADUAÇÃO</span>
+                        <h3 class="faculdade-curso">Engenharia da computação</h3>
+                        <span class="faculdade-instituicao">Uninter</span>
+                    </li>
+                </ul>
+
+                <!--
+                <div>
+
+                    <div class="CursoExtencaoTexto">
+                        <h3>Cursos de Extenção</h3>
+                    </div>
+                   
+
+                    <div class="CursoExtencao">
+                        
+                        <ul class="CursoExtencaoBlocos">
+                            <li class="CursoExtencaoSubTitulo">
+                                CRIANDO SEU PRIMEIRO SITE COM HTML E CSS 
+                                <p>20hs</p>
+                           </li>
+
+                        </ul>
+
+                        <ul class="CursoExtencaoBlocos">
+                            <li class="CursoExtencaoSubTitulo">
+                                MONTAGEM E MANUTENÇÃO DE COMPUTADORES 
+                                <p>260hs</p>
+                            </li>
+
+                        </ul>
+
+                        <ul class="CursoExtencaoBlocos">
+                            <li class="CursoExtencaoSubTitulo">
+                                INSTALADOR E REPARADOR DE REDES DE COMPUTADORES 
+                                <p>160hs</p>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                -->
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer" id="contato">
+
+        <div class="footer-container">
+
+          <p class="footer-texto">
+            Estou Disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 🚀 
+          </p>
+
+          <ul class="footer-contato">
+
+            <li>vagnertisilva18@gmail.com</li>
+            <li>+55 (99) 992025628</li>
+            <li><a href="https://www.instagram.com/vagnersiva18/" target="_blank" rel="noopener noreferrer">@instagram</a></li>
+
+          </ul>
+
+          <p class="footer-copy"> Vagner Alguns direitos reservados.</p>
+
+        </div>
+  
+  
+      </footer>
+
+
+</body>
+</html>

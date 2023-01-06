@@ -1,0 +1,192 @@
+
+*{
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+/*
+html, body{
+    height: 100%;
+}
+*/
+
+header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo h1{
+    color: #f8f9f7;
+    font-size: 2.5rem;
+}
+.logo a{
+    text-decoration: none;
+}
+
+header .container{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.3rem;
+    margin-left: 48px;
+    padding: 6px 10px;
+    border-radius: 30px;
+}
+nav ul li a:hover{
+    background-color: #eba2f8;
+    transition: 0.3s;
+    color: #000000;
+}
+
+@media(max-width: 1050px){
+
+    nav ul li a {
+        
+        font-size: 1rem;
+        margin-left: 40px;
+    }
+
+    .logo h1{
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width: 850px){
+
+    nav ul li a{
+        font-size: 1rem;
+    }
+
+    .logo h1{
+        font-size: 2rem;
+    }
+
+
+    nav{
+        display: none;
+    }
+
+    /* criando as Barras do menu burguer*/
+    .one, .two, .three{
+        background-color: white;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3ms;
+    }
+    .menu-burguer {
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+
+    .menu-section.on{
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 70vh;
+        
+        background: linear-gradient(150deg, #1f036e, rgb(131, 87, 252));
+
+        /*alinhando ao centro*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /******************/
+
+    }
+
+    .menu-section.on nav{
+        display: block;
+    }
+
+    .menu-section.on .menu-burguer{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+
+    /*criando o x */
+    .menu-section.on .menu-burguer .one{
+        /* faz a rotação e centraliza no eixo*/
+        transform: rotate(45deg) translate(7px, 7px); 
+        position: absolute;
+        right: 20px;
+    }
+
+    .menu-section.on .menu-burguer .two{
+        /*opacity: 0; /* esconde a barra*/
+        display: none;
+    }
+
+    .menu-section.on .menu-burguer .three{
+        transform: rotate(-45deg) translate(8px, -9px);
+        position: absolute;
+        right: 20px;
+        top: 22px;
+        
+    }
+
+    .menu-section.on nav ul{
+        display: block;
+        text-align: center;
+
+    }
+
+    .menu-section.on nav ul li a{
+        transition-duration: 0.3ms;
+        font-size: 2rem;
+        line-height: 3.3rem;
+        margin-left: 0;
+    } 
+
+
+
+}
+
+@media(max-width: 600px){
+    .menu-section.on .menu-burguer{
+        right: 8px;
+    }
+}
+
+@media(max-width: 300px){
+
+    .menu-section.on .menu-burguer{
+        right: 0px;
+    }
+    .menu-section.on nav ul li a{
+
+        font-size: 1.3rem;
+       
+    } 
+}
+

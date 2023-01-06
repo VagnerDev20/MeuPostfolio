@@ -1,0 +1,92 @@
+.FotoPerfil img{
+    padding-right: 30px;
+}
+
+.sobre{
+   display: grid;
+   grid-template-columns: 400px 0.9fr;
+   padding: 50px;
+   justify-content: center;
+
+   background-color: #141414;
+}
+
+.CXSobre{
+    display: grid;
+    place-content: center;
+}
+
+.TituloSobre{
+    font-size: 2rem;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.TextoSobre{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+@media (max-width: 1000px){
+
+    .sobre{
+
+        display: flex;
+        /*flex-direction: column;*/
+    }
+
+    .FotoPerfil img{
+        width:300px;
+        height:350px;
+    }
+
+    .TextoSobre{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .sobre{
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .FotoPerfil img
+    {
+        margin-bottom: 30px;
+        padding-right: 0px;
+    }
+
+}
+
+@media (max-width: 570px){
+
+    .FotoPerfil img
+    {
+        width: 200px;
+        height: 250px;
+    }
+
+}
+
+@media (max-width: 300px){
+
+    .FotoPerfil img
+    {
+        width: 100px;
+        height: 130px;
+    }
+
+    .TituloSobre{
+        font-size: 1.3rem;
+    }
+
+    .TextoSobre{
+        font-size: 0.7rem;
+    }
+
+}
+

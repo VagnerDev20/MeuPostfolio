@@ -1,0 +1,65 @@
+.experiencia{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.empresa-ano{
+    margin-bottom: 10px;
+}
+
+.experiencia-texto{
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.experiencia-texto strong{
+    color: #141414;
+}
+
+.empresa-titulo {
+    font-size: 1.5rem;
+    /*font-weight: bold;*/
+}
+
+.empresa-texto {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 600px){
+    .experiencia-texto{
+        font-size: 1.2rem;
+    }
+
+    .empresa-texto{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media(max-width: 300px){
+    .experiencia-texto{
+        font-size: 1rem;
+    }
+
+    .empresa-texto{
+        font-size: 1rem;
+    }
+
+    .empresa-titulo {
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+
+

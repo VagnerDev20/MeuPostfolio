@@ -1,0 +1,191 @@
+.formacao {
+    background: #141414;
+    color: #ffff;
+}
+
+.formacao-container {
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*.formacao-container::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url('../img/detalhe.png') no-repeat center;
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+}
+*/
+
+.formacao .subtitulo {
+    color: #dbdbdb;
+    text-align: center;
+}
+  
+.formacao-texto {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    color: #a3a3a3;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.formacao-texto strong {
+    color: #ffffff;
+}
+  
+.faculdade-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.faculdade {
+    flex: 1; /* todas as caixas fica com o mesmo tamanho*/
+    background: #000000;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculdade-tipo {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #a3a3a3;
+    margin-bottom: 10px;
+}
+
+.faculdade-curso {
+    flex: 1;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    position: relative;
+    color: #ffffff;
+}
+
+.faculdade-curso::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#0500ff, #030239);
+    position: absolute;
+    left: -24px;
+}
+
+.faculdade-instituicao {
+    font-size: 1.125rem;
+    color: #a3a3a3;
+}
+
+
+.CursoExtencaoTexto {
+    font-size: 2rem;
+    color: #8f8f8f;
+    text-transform: uppercase; /* coloca em maiuscula*/
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.CursoExtencao{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.CursoExtencao p {
+    color: #8f8f8f;
+    margin-top: 10px;
+}
+.CursoExtencaoBlocos{
+    flex: 1; /* todas as caixas fica com o mesmo tamanho*/
+    background: #000000;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.CursoExtencaoSubTitulo {
+    flex: 1;
+    font-size: 1.125rem;
+    
+    text-align: left;
+}
+
+/*
+.formacao-extra h3::before {
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -36px;
+    top: -4px;
+}
+*/
+/*
+.cursos h3::before {
+    background: url('../img/cursos.png') no-repeat center center;
+}
+*/
+
+@media (max-width: 900px){
+    .formacao-texto{
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 600px){
+   
+    .faculdade-lista{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .formacao-texto{
+        font-size: 1.1rem;
+    }
+
+    .CursoExtencaoTexto
+    {
+        font-size: 1.2rem;
+        
+    }
+}
+
+@media (max-width: 410px){
+
+    .formacao-texto{
+        font-size: 0.9rem;
+        
+    }
+
+   .faculdade-tipo{
+    font-size: 0.8rem;
+   }
+   .faculdade-curso{
+    font-size: 0.8rem;
+   }
+   .faculdade-instituicao{
+    font-size: 0.8rem;
+   }
+}
