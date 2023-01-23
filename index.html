@@ -6,48 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="SITE PORTIFOLIO DESENVOLVIDO EM HTML CSS E JAVASCRIPT">
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>PORTIFOLIO</title>
 </head>
 <body>
 
     <!--cabeçalho-->
-    <header>
-        
+    <header id="header">
+
         <div class="container">
 
-            <div class="logo">
-                <a href="#introducao"><h1>Home</h1></a>
-               
-            </div>
+            <a id="logo" href="">Logo</a>
 
-            <div class="menu-section">
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span></button>
 
-                <!--botao menu burguer-->
-                <div class="menu-burguer">
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-                </div>
+                <ul id="menu" role="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
 
-                <nav>
-                    <ul>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#habilidades">Habilidades</a></li>
-                        <li><a href="#experiencia">Experiência</a></li>
-                        <li><a href="#formacao">Formação</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </nav>
-
-            </div>
+            </nav>
 
         </div>
-        
-        
 
     </header>
+    <script src="js/script.js"></script>
 
 
     <!--conteudo principal-->
@@ -60,6 +48,7 @@
         </div>
 
     </main>
+    <script src="js/introducao.js"></script>
 
     <!--sobre-->
     <section class="sobre" id="sobre" aria-label="Sobre">
@@ -103,9 +92,8 @@
 
         </div>
 
-        
-
     </section>
+    <script src="js/interacao.js"></script>
     
 
     <!--Experiencia-->
@@ -221,10 +209,8 @@
         </div>
   
   
-      </footer>
+    </footer>
 
-      <script src="js/script.js"></script>
-      <script src="js/introducao.js"></script>
-      <script src="js/interacao.js"></script>
+      
 </body>
 </html>

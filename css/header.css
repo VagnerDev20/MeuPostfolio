@@ -1,192 +1,133 @@
-
 *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
     padding: 0px;
     outline: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
-}
-/*
-html, body{
-    height: 100%;
-}
-*/
-
-header{
+  
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.3rem;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+  
+  a:hover {
+    background-color: #eba2f8;
+    transition: 0.3s;
+    color: #000000;
+  }
+  
+  #logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9f7;
+  }
+  
+  header{
     background-color: black;
     position: fixed;
     width: 100%;
     z-index: 1000;
-}
-
-.logo h1{
-    color: #f8f9f7;
-    font-size: 2.5rem;
-}
-.logo a{
-    text-decoration: none;
-}
-
-header .container{
+  }
+  
+  header .container{
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-}
-
-nav ul{
+    box-sizing: border-box;
+  }
+  
+  #menu {
     display: flex;
-}
-nav ul li{
     list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #f8f9f7;
-    font-size: 1.3rem;
-    margin-left: 48px;
-    padding: 6px 10px;
-    border-radius: 30px;
-}
-nav ul li a:hover{
-    background-color: #eba2f8;
-    transition: 0.3s;
-    color: #000000;
-}
-
-@media(max-width: 1050px){
-
-    nav ul li a {
-        
-        font-size: 1rem;
-        margin-left: 40px;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 850px) {
+    #menu {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 30vw;
+      background: black;
+      z-index: 2000;
+      text-align: center;
+  
+      /* animação */
+      transition: 0.6s;
+      height: 0px; 
+      visibility: hidden; /* esconde menu*/
+      overflow-y: hidden; /* eixo y esconde */
     }
-
-    .logo h1{
-        font-size: 2rem;
+    #nav.active #menu {
+      height: 100vh;
+      visibility: visible; /* aparece menu*/
+      overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
     }
-
-}
-
-@media(max-width: 850px){
-
-    nav ul li a{
-        font-size: 1rem;
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      /*border-bottom: 2px solid rgba(0, 0, 0, 0.05);*/
     }
-
-    .logo h1{
-        font-size: 2rem;
+   
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+      color: white;
     }
-
-
-    nav{
-        display: none;
+    /* criando o botao amburguer */
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+      color: white;
     }
-
-    /* criando as Barras do menu burguer*/
-    .one, .two, .three{
-        background-color: white;
-        height: 5px;
-        width: 100%;
-        margin: 6px auto;
-
-        transition-duration: 0.3ms;
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
     }
-    .menu-burguer {
-        width: 40px;
-        height: 30px;
-        cursor: pointer;
+  
+    /* criando o x */
+    #nav.active #hamburger {
+      border-top-color: transparent;
     }
-
-
-
-    .menu-section.on{
-        position: absolute;
-
-        top: 0;
-        left: 0;
-
-        width: 100vw;
-        height: 70vh;
-        
-        background: linear-gradient(150deg, #1f036e, rgb(131, 87, 252));
-
-        /*alinhando ao centro*/
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /******************/
-
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
     }
-
-    .menu-section.on nav{
-        display: block;
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
     }
+  }
 
-    .menu-section.on .menu-burguer{
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
-
-    /*criando o x */
-    .menu-section.on .menu-burguer .one{
-        /* faz a rotação e centraliza no eixo*/
-        transform: rotate(45deg) translate(7px, 7px); 
-        position: absolute;
-        right: 20px;
-    }
-
-    .menu-section.on .menu-burguer .two{
-        /*opacity: 0; /* esconde a barra*/
-        display: none;
-    }
-
-    .menu-section.on .menu-burguer .three{
-        transform: rotate(-45deg) translate(8px, -9px);
-        position: absolute;
-        right: 20px;
-        top: 22px;
-        
-    }
-
-    .menu-section.on nav ul{
-        display: block;
-        text-align: center;
-
-    }
-
-    .menu-section.on nav ul li a{
-        transition-duration: 0.3ms;
-        font-size: 2rem;
-        line-height: 3.3rem;
-        margin-left: 0;
-    } 
-
-
-
-}
-
-@media(max-width: 600px){
-    .menu-section.on .menu-burguer{
-        right: 8px;
-    }
-}
-
-@media(max-width: 300px){
-
-    .menu-section.on .menu-burguer{
-        right: 0px;
-    }
-    .menu-section.on nav ul li a{
-
-        font-size: 1.3rem;
-       
-    } 
-}
-
+  

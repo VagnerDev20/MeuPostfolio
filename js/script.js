@@ -1,14 +1,17 @@
-let show = true /*estado inicial do menu esteja mostrando*/
+const btnMobile = document.getElementById('btn-mobile'); // pega o elemento pelo id
 
-const menuSection = document.querySelector(".menu-section") /*selecionando a div menu-section e armazenando na variavel menuSection*/
-const menuBurguer = menuSection.querySelector(".menu-burguer") /*selecionando o menuSection e menu-burguer*/
-
-/*criando a função de click*/
-menuBurguer.addEventListener("click", () =>{
-
-    menuSection.classList.toggle("on", show) /* ao clicar adiciona a classe 'on' na div menu-section ficando menu-section on */
-    show = !show  /* ao clicar o show muda para falso*/
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault(); // execulta o touch do android não executa o evento click
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active'); // toggle remove a classe 'active' se tiver adicina se não tiver
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
 }
 
-)
-
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
