@@ -135,13 +135,22 @@ header .container{
 
 }
 
-@media(max-width:400px){
+@media(max-width:600px){
     #nav.active #menu {
         
-        width: 45vw;
+        width: 50vw;
         
     }
 }
+/*
+@media(max-width:400px){
+    #nav.active #menu {
+        
+        width: 55vw;
+        
+    }
+}
+*/
 
 
 
